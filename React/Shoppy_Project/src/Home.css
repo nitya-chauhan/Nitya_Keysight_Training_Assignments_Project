@@ -1,0 +1,104 @@
+/* ====== MAIN PAGE STYLING ====== */
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f9fafb, #eef1f5);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== PAGE HEADING ===== */
+h1 {
+  text-align: center;
+  color: #1f2937;
+  margin: 18px 0;
+  font-size: 34px;
+  letter-spacing: 0.5px;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background-color: #ffffff;
+  padding: 14px;
+  margin: 15px auto;
+  width: 85%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+  margin: 0 16px;
+  font-size: 17px;
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #1e40af;
+  text-decoration: underline;
+}
+
+/* ===== DESCRIPTION SECTION ===== */
+h2 {
+  text-align: center;
+  color: #374151;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+p {
+  width: 85%;
+  margin: 10px auto 20px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #4b5563;
+  text-align: justify;
+}
+
+/* ===== CATEGORY SECTION ===== */
+h3 {
+  text-align: center;     /* 👈 left se center */
+  margin: 20px 0 12px;
+  color: #374151;
+  font-size: 22px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;   /* 👈 MAIN FIX */
+  gap: 30px;
+}
+
+ul li {
+  font-size: 19px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #f97316;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 10px;
+  background-color: #fff7ed;
+  transition: all 0.2s ease;
+}
+
+ul li a:hover {
+  background-color: #fed7aa;
+  color: #c2410c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  margin-top: 30px;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #111827, #1f2937);
+  color: #e5e7eb;
+  text-align: center;
+  font-size: 15px;
+}

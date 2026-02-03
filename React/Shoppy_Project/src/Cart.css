@@ -1,0 +1,211 @@
+/* ===== CART PAGE ===== */
+
+h1 {
+  text-align: center;
+  margin: 25px 0;
+  font-size: 34px;
+  color: #1f2937;
+}
+
+/* Main cart box */
+.cart-container {
+  width: 90%;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  text-align: left;
+  padding: 15px 10px;
+  font-size: 16px;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+tbody td {
+  padding: 15px 10px;
+  font-size: 15px;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+/* Product image */
+tbody img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Price column */
+tbody td:nth-child(3) {
+  font-weight: 600;
+}
+
+/* Buttons section */
+.cart-actions {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+}
+
+/* Purchase buttons */
+.cart-actions button {
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Clothing button */
+.cart-actions a:first-child button {
+  background-color: #2563eb;
+  color: white;
+}
+
+.cart-actions a:first-child button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Electronics button */
+.cart-actions a:last-child button {
+  background-color: #059669;
+  color: white;
+}
+
+.cart-actions a:last-child button:hover {
+  background-color: #047857;
+}
+
+/* Total price */
+.total-price {
+  margin-top: 20px;
+  text-align: right;
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* Empty cart button */
+.clear-cart-btn {
+  margin-top: 15px;
+  float: right;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
+
+.clear-cart-btn:hover {
+  background-color: darkred;
+}
+
+/* Quantity box (Amazon-style) */
+.qty-box {
+  display: flex;
+  align-items: center;   /* 🔑 THIS fixes vertical alignment */
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.qty-box button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #e5e7eb;
+
+  display: flex;          /* 🔑 centers icon/text */
+  align-items: center;
+  justify-content: center;
+  line-height: 1;         /* 🔑 emoji height fix */
+}
+
+
+.qty-box button:hover {
+  background-color: #d1d5db;
+}
+
+.qty-box span {
+  font-weight: bold;
+  min-width: 22px;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+  }
+
+  tfoot td {
+  padding-top: 15px;
+  vertical-align: middle;
+}
+.price-col,
+tfoot .price-col {
+  text-align: center;   /* EXACT same alignment */
+}
+
+
+
+
+
+}
+
+
+/* Quantity column alignment fix */
+thead th:nth-child(4),
+tbody td:nth-child(4) {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cart-bottom {
+  display: flex;
+  justify-content: space-between; /* left + right */
+  align-items: center;            /* same vertical line */
+  margin-top: 20px;
+}
+/* PRICE COLUMN: header + body + footer */
+thead th:nth-child(3),
+.price-col {
+  text-align: center;       /* 🔑 SAME axis */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* STOP wrapping Total Price into 2 lines */
+.total-price {
+  white-space: nowrap;     /* 🔑 THIS IS THE KEY */
+  line-height: 1.4;
+  font-size: 20px;
+  font-weight: bold;
+}

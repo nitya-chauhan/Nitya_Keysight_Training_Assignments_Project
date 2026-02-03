@@ -1,0 +1,64 @@
+/* ===== ABOUT PAGE ===== */
+
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.about-container h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #1f2937;
+}
+
+/* Paragraph text */
+.about-container p {
+  font-size: 16.5px;
+  line-height: 1.9;
+  color: #374151;
+  text-align: justify;
+}
+
+/* Subtle background for page */
+body {
+  background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+
+  .about-container h2 {
+    font-size: 26px;
+  }
+
+  .about-container p {
+    font-size: 15px;
+  }
+}
+
+.back-home {
+  margin-top: 50px;
+  padding: 20px 40px;
+  background: linear-gradient(to right, #020617, #0f172a);
+}
+
+.back-home a {
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.back-home a:hover {
+  text-decoration: underline;
+}

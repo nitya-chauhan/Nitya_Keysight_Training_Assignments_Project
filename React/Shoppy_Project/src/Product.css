@@ -1,0 +1,126 @@
+/* ===== PRODUCT PAGE LAYOUT ===== */
+
+.product-page {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== LEFT IMAGE ===== */
+.product-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== RIGHT DETAILS ===== */
+.product-details {
+  width: 500px;
+}
+
+/* TITLE */
+.product-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* RATING */
+.product-rating span {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+/* AMAZON CHOICE */
+.amazon-choice {
+  margin: 10px 0;
+}
+
+/* DEAL TAG */
+.deal-tag {
+  display: inline-block;
+  background: crimson;
+  color: white;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/* PRICE */
+.product-price {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* CART ROW */
+.cart-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+/* ADD TO CART BUTTON */
+.add-to-cart {
+  background-color: #f08804;
+  color: #111;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #d97706;
+}
+
+/* CATEGORY */
+.product-category {
+  margin: 20px 0;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+/* DESCRIPTION */
+.product-description {
+  padding: 15px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  line-height: 1.6;
+}
+
+/* BOTTOM ICONS */
+.product-services {
+  margin-top: 20px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+  max-width: 100%;      /* 🔑 parent ke andar hi rahe */
+  overflow: hidden;    /* 🔑 bahar nikalne se roke */
+}
+
+.product-services img {
+  width: 100%;         /* 🔑 div ke andar fit */
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
