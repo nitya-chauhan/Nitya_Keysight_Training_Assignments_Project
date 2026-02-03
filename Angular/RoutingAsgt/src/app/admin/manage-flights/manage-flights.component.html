@@ -1,0 +1,42 @@
+<h2>Manage Flights</h2>
+
+<table border="1" cellpadding="6">
+  <tr>
+    <th>Flight No</th>
+    <th>Source</th>
+    <th>Destination</th>
+    <th>Time</th>
+    <th>Price</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let flight of flights">
+
+    <!-- NORMAL VIEW -->
+    <ng-container *ngIf="editingFlightId !== flight.id; else editMode">
+      <td>{{ flight.flightNo }}</td>
+      <td>{{ flight.source }}</td>
+      <td>{{ flight.destination }}</td>
+      <td>{{ flight.time }}</td>
+      <td>₹{{ flight.price }}</td>
+      <td>
+        <button (click)="editFlight(flight)">Edit</button>
+        <button (click)="deleteFlight(flight.id)">Delete</button>
+      </td>
+    </ng-container>
+
+    <!-- EDIT MODE -->
+    <ng-template #editMode>
+      <td><input [(ngModel)]="editedFlight.flightNo"></td>
+      <td><input [(ngModel)]="editedFlight.source"></td>
+      <td><input [(ngModel)]="editedFlight.destination"></td>
+      <td><input type="time" [(ngModel)]="editedFlight.time"></td>
+      <td><input type="number" [(ngModel)]="editedFlight.price"></td>
+      <td>
+        <button (click)="updateFlight()">Save</button>
+        <button (click)="cancelEdit()">Cancel</button>
+      </td>
+    </ng-template>
+
+  </tr>
+</table>

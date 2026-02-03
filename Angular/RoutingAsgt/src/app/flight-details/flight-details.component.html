@@ -1,0 +1,13 @@
+<h2>Flight Details</h2>
+
+<div *ngIf="flight; else notFound">
+  <p><b>Flight No:</b> {{ flight.flightNo }}</p>
+  <p><b>Source:</b> {{ flight.source }}</p>
+  <p><b>Destination:</b> {{ flight.destination }}</p>
+  <p><b>Time:</b> {{ flight.time }}</p>
+  <p><b>Price:</b> ₹{{ flight.price }}</p>
+</div>
+
+<ng-template #notFound>
+  <p>Flight not found.</p>
+</ng-template>

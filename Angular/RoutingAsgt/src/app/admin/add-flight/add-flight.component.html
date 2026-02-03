@@ -1,0 +1,37 @@
+<h2>Add Flight</h2>
+
+<form (ngSubmit)="addFlight()">
+
+  <p>
+    Flight No:
+    <input type="text" [(ngModel)]="flight.flightNo" name="flightNo" required>
+  </p>
+
+  <p>
+    Source:
+    <input type="text" [(ngModel)]="flight.source" name="source" required>
+  </p>
+
+  <p>
+    Destination:
+    <input type="text" [(ngModel)]="flight.destination" name="destination" required>
+  </p>
+
+  <p>
+  Time:
+  <input
+    type="time"
+    [(ngModel)]="flight.time"
+    name="time"
+    required
+  >
+</p>
+
+
+  <p>
+    Price:
+    <input type="number" [(ngModel)]="flight.price" name="price" required>
+  </p>
+
+  <button type="submit">Add Flight</button>
+</form>

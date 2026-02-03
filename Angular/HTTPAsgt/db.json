@@ -1,0 +1,44 @@
+{
+  "flights": [
+    {
+      "id": "1",
+      "flightNo": "AI101",
+      "airline": "INDIGO",
+      "source": "DEL",
+      "destination": "MUM",
+      "departureTime": "10:30",
+      "price": 4500,
+      "status": "Cancelled"
+    },
+    {
+      "id": "2",
+      "flightNo": "QU102",
+      "airline": "INDIGO",
+      "source": "MUM",
+      "destination": "FRA",
+      "departureTime": "06:30",
+      "price": 6300,
+      "status": "On Time"
+    },
+    {
+      "id": "3",
+      "flightNo": "LH303",
+      "airline": "LUFTHANSA",
+      "source": "FRA",
+      "destination": "DEL",
+      "departureTime": "02:15",
+      "price": 62000,
+      "status": "Cancelled"
+    },
+    {
+      "id": "4",
+      "flightNo": "IJ654",
+      "airline": "AIRINDIA",
+      "source": "CHI",
+      "destination": "DEL",
+      "departureTime": "21:45",
+      "price": 75000,
+      "status": "Delayed"
+    }
+  ]
+}

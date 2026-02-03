@@ -1,0 +1,28 @@
+<table border="1" width="100%">
+  <tr>
+    <th>Flight No</th>
+    <th>Source</th>
+    <th>Destination</th>
+    <th>Departure</th>
+    <th>Status</th>
+  </tr>
+
+  <tr *ngFor="let flight of flights"
+      [ngClass]="{
+        'green': flight.status === 'On Time',
+        'orange': flight.status === 'Delayed',
+        'red': flight.status === 'Cancelled'
+      }">
+
+    <td>{{ flight.flightNo }}</td>
+    <td>{{ flight.source }}</td>
+    <td>{{ flight.destination }}</td>
+    <td>{{ flight.time }}</td>
+    <td>
+      {{ flight.status }}
+
+      <p *ngIf="flight.status === 'Delayed'">Flight is delayed</p>
+      <p *ngIf="flight.status === 'Cancelled'">Flight cancelled</p>
+    </td>
+  </tr>
+</table>

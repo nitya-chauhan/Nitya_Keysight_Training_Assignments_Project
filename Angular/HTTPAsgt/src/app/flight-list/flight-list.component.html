@@ -1,0 +1,104 @@
+<!-- ACTION BUTTONS -->
+<button type="button" (click)="getAllFlights()">GET Flights</button>
+
+<button type="button" (click)="showAddForm = !showAddForm">
+  POST (Add Flight)
+</button>
+
+<!-- ADD FLIGHT FORM -->
+<div *ngIf="showAddForm" style="margin-top: 15px; border: 1px solid #000; padding: 10px;">
+
+  <h3>Add New Flight</h3>
+
+  Flight No:
+  <input [(ngModel)]="newFlight.flightNo"><br><br>
+
+  Airline:
+  <input [(ngModel)]="newFlight.airline"><br><br>
+
+  Source:
+  <input [(ngModel)]="newFlight.source"><br><br>
+
+  Destination:
+  <input [(ngModel)]="newFlight.destination"><br><br>
+
+  Departure Time:
+  <input type="time" [(ngModel)]="newFlight.departureTime"><br><br>
+
+  Price:
+  <input type="number" [(ngModel)]="newFlight.price"><br><br>
+
+  Status:
+  <select [(ngModel)]="newFlight.status">
+    <option>On Time</option>
+    <option>Delayed</option>
+    <option>Cancelled</option>
+  </select><br><br>
+
+  <button type="button" (click)="addFlight()">Add Flight</button>
+</div>
+
+
+
+<!-- FILTER & SORT -->
+<select [(ngModel)]="searchText">
+  <option value="">-- All --</option>
+  <option *ngFor="let loc of uniqueLocations" [value]="loc">
+    {{ loc }}
+  </option>
+</select>
+
+<select [(ngModel)]="sortKey">
+  <option value="price">Sort by Price</option>
+  <option value="departureTime">Sort by Time</option>
+</select>
+
+<select [(ngModel)]="sortOrder">
+  <option value="asc">Ascending</option>
+  <option value="desc">Descending</option>
+</select>
+
+<br><br>
+
+<!-- FLIGHT TABLE -->
+<table border="1">
+  <tr>
+    <th>Flight No</th>
+    <th>Airline</th>
+    <th>From</th>
+    <th>To</th>
+    <th>Time</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let f of flights 
+              | flightFilter:searchText 
+              | flightSort:sortKey:sortOrder">
+
+    <td>{{ f.flightNo }}</td>
+    <td>{{ f.airline | uppercase }}</td>
+    <td>{{ f.source }}</td>
+    <td>{{ f.destination }}</td>
+    <td>{{ f.departureTime }}</td>
+    <td>{{ f.price | currency:'INR' }}</td>
+
+    <td
+      [ngClass]="{
+        'on-time': f.status === 'On Time',
+        'delayed': f.status === 'Delayed',
+        'cancelled': f.status === 'Cancelled'
+      }">
+      {{ f.status }}
+    </td>
+
+    <td>
+      <button type="button" (click)="updateFlightStatus(f)">Edit</button>
+      <button type="button" (click)="deleteFlight(f.id)">Delete</button>
+
+
+
+    </td>
+  </tr>
+</table>

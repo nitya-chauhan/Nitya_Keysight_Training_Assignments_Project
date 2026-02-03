@@ -1,0 +1,14 @@
+.on-time {
+  color: green;
+  font-weight: bold;
+}
+
+.delayed {
+  color: orange;
+  font-weight: bold;
+}
+
+.cancelled {
+  color: red;
+  font-weight: bold;
+}
